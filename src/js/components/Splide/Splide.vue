@@ -98,7 +98,7 @@ export default defineComponent( {
     } );
 
     if ( options ) {
-      watch( () => merge( {}, options ), options => {
+      watch( () => merge( {}, options as {} ), options => {
         if ( splide.value ) {
           splide.value.options = options;
         }
